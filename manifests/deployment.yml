@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akshaykumarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akshaykumarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: akshaykumarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: akshaykumarpipelinesjavascriptdocker 
+          image: axaypaladregistry.azurecr.io/akshaykumarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
